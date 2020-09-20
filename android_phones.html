@@ -1,0 +1,167 @@
+<!-- DEVELOPER: Vishal Tailor, IS117-002, Spring 2019 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="theme-color" content="#29323c" />
+   <!-- Favicon -->
+   <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+   <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="css/motiontech.css">
+   <!-- jQuery 3.3.1 -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <title>Android Phones | MotionTech</title>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138688558-1"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-138688558-1');
+   </script>
+   <script>
+      // Light and dark mode
+      document.addEventListener('DOMContentLoaded', (event) => {
+         ((localStorage.getItem('mode') || 'dark') === 'dark') ? document.querySelector('body').classList.add('dark'): document.querySelector('body').classList.remove('dark')
+      })
+   </script>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" id="navbar-brand" href="index.html">MotionTech</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class="navbar-nav">
+            <li class="nav-item">
+               <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown active">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Devices </a>
+               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="apple_phones.html">Apple Phone</a>
+                  <a class="dropdown-item active" href="android_phones.html">Android Phone</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="compare_phones.html">Compare Devices</a>
+               </div>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="about_us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="contact_us.html">Contact Us</a>
+            </li>
+            <li class="nav-item" title="Toggle between light and dark mode">
+               <a class="nav-link">
+                  <input type="checkbox" id="cbx" style="display:none" value="save" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'bright' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark'); save_state()" />
+                  <label for="cbx" class="toggle"><span></span></label>
+               </a>
+            </li>
+         </ul>
+      </div>
+   </nav>
+   <div class="container">
+      <div class="row my-3">
+         <div class="col-lg-4">
+            <div class="card my-3">
+               <img src="android_devices/android_image/lg-v30-h930-64gb-4g-pink.jpg" class="card-img-top" alt="LG_V30">
+               <div class="card-body">
+                  <h5 class="card-title">LG V30</h5>
+                  <a href="android_devices/lg_v30.html" class="btn btn-primary">Read Specs</a>
+                  <a href="https://www.amazon.com/LG-V30-Silver-Verizon-64gb/dp/B079YSZ9R2/ref=sr_1_1?keywords=lg+v30+unlocked&qid=1557089115&s=gateway&sr=8-1" class="btn btn-primary" target="_blank">Buy <i class="fas fa-shopping-cart"></i></a>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-4">
+            <div class="card my-3">
+               <img src="android_devices/android_image/oneplus-6t-a6013-256gb-8gb-ram-dual-sim-black.jpg" class="card-img-top" alt="OnePlus_6T">
+               <div class="card-body">
+                  <h5 class="card-title">OnePlus 6T</h5>
+                  <a href="android_devices/oneplus_6t.html" class="btn btn-primary">Read Specs</a>
+                  <a href="https://www.oneplus.com/oneplus-6t?from=6t" class="btn btn-primary" target="_blank">Buy <i class="fas fa-shopping-cart"></i></a>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-4">
+            <div class="card my-3">
+               <img src="android_devices/android_image/sony-xperia-xz2-compact-dual-h8324.jpg" class="card-img-top" alt="Sony_Xperia_XZ2">
+               <div class="card-body">
+                  <h5 class="card-title">Sony Xperia XZ2</h5>
+                  <a href="android_devices/sony_xperia_xz2.html" class="btn btn-primary">Read Specs</a>
+                  <a href="https://www.bestbuy.com/site/sony-xperia-xz2-with-64gb-memory-cell-phone-unlocked-liquid-black/6219454.p?skuId=6219454" class="btn btn-primary" target="_blank">Buy <i class="fas fa-shopping-cart"></i></a>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-4">
+            <div class="card my-3">
+               <img src="android_devices/android_image/lg-g7-thinq-64gb-black.jpg" class="card-img-top" alt="LG_G7_ThinQ">
+               <div class="card-body">
+                  <h5 class="card-title">LG G7 ThinQ</h5>
+                  <a href="android_devices/lg_g7_thinq.html" class="btn btn-primary">Read Specs</a>
+                  <a href="https://www.lg.com/us/mobile-phones/g7-thinq#platinumgrey-unlocked" class="btn btn-primary" target="_blank">Buy <i class="fas fa-shopping-cart"></i></a>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-4">
+            <div class="card my-3">
+               <img src="android_devices/android_image/samsung-galaxy-note-9-n960-6gb-128gb-dual-sim-purple.jpg" class="card-img-top" alt="Samsung_Galaxy_Note_9">
+               <div class="card-body">
+                  <h5 class="card-title">Samsung Galaxy Note 9</h5>
+                  <a href="android_devices/galaxy_note_9.html" class="btn btn-primary">Read Specs</a>
+                  <a href="https://www.samsung.com/us/mobile/galaxy-note9/buy/" class="btn btn-primary" target="_blank">Buy <i class="fas fa-shopping-cart"></i></a>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-4">
+            <div class="card my-3">
+               <img src="android_devices/android_image/huawei_p20_pro.jpg" class="card-img-top" alt="Huawei_P20_Pro">
+               <div class="card-body">
+                  <h5 class="card-title">Huawei P20 Pro</h5>
+                  <a href="android_devices/huawei_p20_pro.html" class="btn btn-primary">Read Specs</a>
+                  <a href="https://consumer.huawei.com/en/phones/p20-pro/" class="btn btn-primary" target="_blank">Buy <i class="fas fa-shopping-cart"></i></a>
+               </div>
+            </div>
+         </div>
+      </div> <!-- Row -->
+   </div> <!-- Container -->
+
+   <!-- Footer -->
+   <footer id="sticky-footer" class="py-4 bg-dark text-white-50 d-flex flex-column">
+    <div class="container text-center">
+      <ul>
+         <li><a class="disabled">&copy; MotionTech 2019</a></li>
+         <li><a href="terms_of_use.html">Terms of Use</a></li>
+         <li><a href="privacy_policy.html">Privacy Policy</a></li>
+       </ul>
+    </div>
+  </footer>
+
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script>
+      function save_state() {
+         var checkbox = document.getElementById('cbx');
+         localStorage.setItem('cbx', checkbox.checked);
+      }
+      function load() {
+         var checked = JSON.parse(localStorage.getItem('cbx'));
+         document.getElementById("cbx").checked = checked;
+      }
+      function wis() {
+         location.reload();
+         localStorage.clear()
+      }
+      load();
+   </script>
+</body>
+</html>

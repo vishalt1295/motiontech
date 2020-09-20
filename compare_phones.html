@@ -1,0 +1,284 @@
+<!-- DEVELOPER: Vishal Tailor, IS117-002, Spring 2019 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="theme-color" content="#29323c" />
+   <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+   <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <!-- jQuery 3.3.1 -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="css/motiontech.css">
+   <title>Compare Phones | MotionTech</title>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138688558-1"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-138688558-1');
+   </script>
+   <script>
+      // Light and dark mode
+      document.addEventListener('DOMContentLoaded', (event) => {
+         ((localStorage.getItem('mode') || 'dark') === 'dark') ? document.querySelector('body').classList.add('dark'): document.querySelector('body').classList.remove('dark')
+      })
+   </script>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <a class="navbar-brand" id="navbar-brand" href="index.html">MotionTech</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class="navbar-nav">
+            <li class="nav-item">
+               <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown active">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Devices </a>
+               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="apple_phones.html">Apple Phone</a>
+                  <a class="dropdown-item" href="android_phones.html">Android Phone</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item active" href="compare_phones.html">Compare Devices</a>
+               </div>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="about_us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="contact_us.html">Contact Us</a>
+            </li>
+            <li class="nav-item" title="Toggle between light and dark mode">
+               <a class="nav-link">
+                  <input type="checkbox" id="cbx" style="display:none" value="save" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'bright' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark'); save_state()" />
+                  <label for="cbx" class="toggle">
+                     <span></span>
+                  </label>
+               </a>
+            </li>
+         </ul>
+      </div>
+   </nav>
+   <div class="container">
+      <div class="row my-3 mb-5">
+         <div class="col-lg-4">
+            <div class="card my-2">
+               <div class="selectProduct w3-padding" data-title="iPhoneXR" data-id="iPhone XR" data-dimensions="5.94 x 2.98 x 0.33 inches" data-weight="194 grams (6.84 ounces)" data-screen="6.1-inch Liquid Retina HD" data-os="iOS 12" data-storage="64GB, 128GB, 256GB" data-microsd="No" data-processor="A12 Bionic" data-ram="3GB" data-camera="12MP rear, 7MP front" data-waterresistant="IP67" data-battery="2,942 mAh" data-price="$750">
+                  <img src="apple_devices/apple_images/apple-iphone-xr-256gb-red.jpg" class="card-img-top imgFill productImg" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">iPhone XR</h5>
+                     <a href="#" class="btn btn-primary addToCompare">Add to compare</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-4">
+            <div class="card my-2">
+               <div class="selectProduct w3-padding" data-title="LGV30" data-id="LG V30" data-dimensions="151.6 x 75.4 x 7.4 mm" data-weight="158 grams" data-screen="6-inch P-OLED" data-os="Android 7.1.2 Nougat" data-storage="64GB, 128GB" data-microsd="Yes" data-processor="Snapdragon 835" data-ram="4GB" data-camera="16 and 13MP wide rear, 5MP front" data-waterresistant="IP68" data-battery="3,300 mAh" data-price="$600+">
+                  <img src="android_devices/android_image/lg-v30-h930-64gb-4g-pink.jpg" class="card-img-top imgFill productImg" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">LG V30</h5>
+                     <a href="#" class="btn btn-primary addToCompare">Add to compare</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-lg-4">
+            <div class="card my-2">
+               <div class="selectProduct w3-padding" data-title="iPhoneSE" data-id="iPhone SE" data-dimensions="4.87 x 2.31 x .30 inches" data-weight="3.99 ounces" data-screen="4-inch Retina Display" data-os="iOS 12" data-storage="16GB, 64GB" data-microsd="No" data-processor="A9" data-ram="2GB" data-camera="12MP rear, 7MP front" data-waterresistant="IP67" data-battery="1,642 mAh" data-price="$400">
+                  <img src="apple_devices/apple_images/apple-iphone-se-4g-128gb-gold.jpg" class="card-img-top imgFill productImg" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">iPhone SE</h5>
+                     <a href="#" class="btn btn-primary addToCompare">Add to compare</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-lg-4">
+            <div class="card my-2">
+               <div class="selectProduct w3-padding" data-title="HuaweiP20Lite" data-id="Huawei P20 Lite" data-dimensions="155 x 73.9 x 7.8 mm" data-weight="174 grams" data-screen="6.1-inch OLED display" data-os="Emotion UI 8.1 (over Android 8.1 Oreo)" data-storage="128GB" data-microsd="No" data-processor="Kirin 970" data-ram="6GB" data-camera="Triple-lens 40MP, 20MP, and 8MP rear, 24MP front" data-waterresistant="IP67" data-battery="4,000 mAh" data-price="$1,000">
+                  <img src="android_devices/android_image/huawei_p20_pro.jpg" class="card-img-top imgFill productImg" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">Huawei P20 Pro</h5>
+                     <a href="#" class="btn btn-primary addToCompare">Add to compare</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-lg-4">
+            <div class="card my-2">
+               <div class="selectProduct w3-padding" data-title="SamsungGalaxyNote9" data-id="Samsung Galaxy Note 9" data-dimensions="161.9 x 76.4 x 8.8 mm" data-weight="201 grams" data-screen="6.4-inch Super AMOLED display" data-os="Samsung Experience 9 (over Android 8.0 Oreo)" data-storage="128GB, 512GB" data-microsd="Yes, up to 512GB" data-processor="Snapdragon 845" data-ram="6GB, 8GB" data-camera="Dual 12MP rear, variable aperture, 8MP front" data-waterresistant="IP68" data-battery="4,000 mAh" data-price="$1,000">
+                  <img src="android_devices/android_image/samsung-galaxy-note-9-n960-6gb-128gb-dual-sim-purple.jpg" class="card-img-top imgFill productImg" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">Samsung Galaxy Note 9</h5>
+                     <a href="#" class="btn btn-primary addToCompare">Add to compare</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-lg-4">
+            <div class="card my-2">
+               <div class="selectProduct w3-padding" data-title="iPhone6S" data-id="iPhone 6S" data-dimensions="5.44 x 2.64 x 0.28 inches" data-weight="5.04 ounces" data-screen="4.7" data-os="iOS 10 (upgradable to iOS 12)" data-storage="16GB, 64GB, 128GB" data-microsd="No" data-processor="A9" data-ram="2GB" data-camera="12MP rear, 5MP front" data-waterresistant="No" data-battery="2,750 mAh" data-price="$300">
+                  <img src="apple_devices/apple_images/apple-iphone-6s-32gb-gray.jpg" class="card-img-top imgFill productImg" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">iPhone 6S</h5>
+                     <a href="#" class="btn btn-primary addToCompare">Add to compare</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-lg-4">
+            <div class="card my-2">
+               <div class="selectProduct w3-padding" data-title="iPhoneX" data-id="iPhone X" data-dimensions="5.65 x 2.79 x 0.30 inches" data-weight="174 grams (6.14 ounces)" data-screen="5.8-inch OLED Super Retina HD" data-os="iOS 12" data-storage="64,256GB" data-microsd="No" data-processor="A11 Fusion" data-ram="3GB" data-camera="12MP rear, 7MP front" data-waterresistant="IP67" data-battery="2,716 mAh" data-price="$850">
+                  <img src="apple_devices/apple_images/apple-iphone-x-64gb-silver.jpg" class="card-img-top imgFill productImg" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">iPhone X</h5>
+                     <a href="#" class="btn btn-primary addToCompare">Add to compare</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-lg-4">
+            <div class="card my-2">
+               <div class="selectProduct w3-padding" data-title="iPhone7" data-id="iPhone 7" data-dimensions="5.44 × 2.64 × 0.28 inches (138.3 × 67.1 × 7.1 mm)" data-weight="4.87 ounces (138 grams)" data-screen="4.7-inch Retina HD" data-os="iOS 10 (Upgradable to iOS 12)" data-storage="32, 128, 256GB" data-microsd="No" data-processor="A10 Fusion" data-ram="2GB" data-camera="12MP rear, 7MP front" data-waterresistant="IP67" data-battery="1,960 mAh" data-price="$450">
+                  <img src="apple_devices/apple_images/apple-iphone-7-plus-4g-256gb-rose.jpg" class="card-img-top imgFill productImg" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">iPhone 7</h5>
+                     <a href="#" class="btn btn-primary addToCompare">Add to compare</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-lg-4">
+            <div class="card my-2">
+               <div class="selectProduct w3-padding" data-title="SonyXperiaXZ2" data-id="Sony Xperia XZ2" data-dimensions="153 x 72 x 11.1mm" data-weight="198g" data-screen="5.7-inch LCD" data-os="Android 8.0 Oreo" data-storage="64GB" data-microsd="Yes, up to 400GB" data-processor="Snapdragon 845" data-ram="4GB" data-camera="19MP rear, 5MP front" data-waterresistant="IP68" data-battery="3,180 mAh" data-price="$500">
+                  <img src="android_devices/android_image/sony-xperia-xz2-compact-dual-h8324.jpg" class="card-img-top imgFill productImg" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">Sony Xperia XZ2</h5>
+                     <a href="#" class="btn btn-primary addToCompare">Add to compare</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-lg-4">
+            <div class="card my-2">
+               <div class="selectProduct w3-padding" data-title="LGG7ThinQ" data-id="LG G7 ThinQ" data-dimensions="153.2 x 71.9 x 7.9 mm" data-weight="162 grams" data-screen="6.1-inch IPS LCD" data-os="Android 8.0 Oreo" data-storage="64GB, 128GB" data-microsd="Yes" data-processor="Snapdragon 845" data-ram="2GB" data-camera="Dual 16MP and 16MP wide-angle rear, 8MP front camera" data-waterresistant="IP68" data-battery="3,300 mAh" data-price="$650+">
+                  <img src="android_devices/android_image/lg-g7-thinq-64gb-black.jpg" class="card-img-top imgFill productImg" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">LG G7 ThinQ</h5>
+                     <a href="#" class="btn btn-primary addToCompare">Add to compare</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-lg-4">
+            <div class="card my-2">
+               <div class="selectProduct w3-padding" data-title="iPhone8" data-id="iPhone 8" data-dimensions="5.45 x 2.65 x 0.29 inches" data-weight="148g" data-screen="4.7-inch Retina HD" data-os="iOS 12" data-storage="64,256GB" data-microsd="No" data-processor="A11 Bionic" data-ram="2GB" data-camera="12MP rear, 7MP front" data-waterresistant="IP67" data-battery="1,821 mAh" data-price="$600">
+                  <img src="apple_devices/apple_images/apple-iphone-8-256gb-grey.jpg" class="card-img-top imgFill productImg" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">iPhone 8</h5>
+                     <a href="#" class="btn btn-primary addToCompare">Add to compare</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-lg-4">
+            <div class="card my-2">
+               <div class="selectProduct w3-padding" data-title="OnePlus6T" data-id="OnePlus 6T" data-dimensions="157.5 × 74.8 × 8.2 mm" data-weight="185 grams" data-screen="6.41-inch AMOLED" data-os="Android 9.0 Pie" data-storage="128GB, 256GB" data-microsd="No" data-processor="Snapdragon 845" data-ram="6GB, 8GB" data-camera="Dual 16MP and 20MP rear, 16MP front" data-waterresistant="No" data-battery="3,700 mAh" data-price="$550">
+                  <img src="android_devices/android_image/oneplus-6t-a6013-256gb-8gb-ram-dual-sim-black.jpg" class="card-img-top imgFill productImg" alt="...">
+                  <div class="card-body">
+                     <h5 class="card-title">OnePlus 6T</h5>
+                     <a href="#" class="btn btn-primary addToCompare">Add to compare</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> <!-- Row -->
+   </div> <!-- Container -->
+
+   <div class="container">
+      <div class="card comparePanle" id="comparePanelCard">
+         <h5 class="card-header">Compare Phones (Bug: Wrong images are shown)</h5>
+         <div class="card-body">
+            <div class=" titleMargin panel-container comparePan">
+            </div>
+            <button class="btn btn-primary notActive cmprBtn" data-toggle="modal" data-target="#id01">Compare</button>
+         </div>
+      </div>
+   </div>
+
+   <!-- Compare Panel Modal -->
+   <div class="modal fade modPos" id="id01" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+               <button type="button" class="close closeBtn" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div>
+                  <div class="container">
+                     <!--<a onclick="document.getElementById('id01').style.display='none'" ></a>-->
+                  </div>
+                  <div class="row contentPop w3-margin-top">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Footer -->
+   <footer id="sticky-footer" class="py-4 bg-dark text-white-50 d-flex flex-column">
+    <div class="container text-center">
+      <ul>
+         <li><a class="disabled">&copy; MotionTech 2019</a></li>
+         <li><a href="terms_of_use.html">Terms of Use</a></li>
+         <li><a href="privacy_policy.html">Privacy Policy</a></li>
+       </ul>
+    </div>
+  </footer>
+
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script src="js/compareProduct.js"></script>
+   <script>
+      function save_state() {
+         var checkbox = document.getElementById('cbx');
+         localStorage.setItem('cbx', checkbox.checked);
+      }
+      function load() {
+         var checked = JSON.parse(localStorage.getItem('cbx'));
+         document.getElementById("cbx").checked = checked;
+      }
+      function wis() {
+         location.reload();
+         localStorage.clear()
+      }
+      load();
+   </script>
+</body>
+</html>
